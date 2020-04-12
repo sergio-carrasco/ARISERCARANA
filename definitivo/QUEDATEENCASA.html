@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>#QUEDATEENCASA</title>
+    <meta charset="utf-8">
+    <!--FUENTES PARA LETRAS-->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Fredericka the Great' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Dawning of a New Day' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <!--CSS y JS-->
+    <link rel="stylesheet" type="text/css" href="./css/estilos.css" media="screen" />
+    <script type="text/javascript" src="./js/mi_codigo.js"></script>
+</head>
+
+
+
+<body background="./img/fondo.jpg">
+  <!--LOGO ENCABEZADO PÁGINA-->
+  <img src="./img/logogrande.jpg" height="200" width="100%" id="logo">
+    <h1>Estamos juntos en esto</h1>
+    <h2>Cuando salgamos el mundo se llenará de primeras veces</h2>
+
+  <!--PESTAÑAS-->
+  <div class="contenedor">
+
+  <!--INICIO PESTAÑA-->
+  <a href="#" class="cabecera c-activa" onclick="mostrarPestana(0);" id="inicio">INICIO</a>
+  <div class="pestana p-activa">
+    <h3>¿UN POCO DE MÚSICA PARA EMPEZAR?</h3>
+    <audio src="./musica/Barrer a casa.mp3" type="audio/mp3" controls id="cancion"></audio>
+    <h5>Sabemos que estás en el día tropecientosmil de encierro... <br>
+        Que estarás dándole vueltas a todas las cosas que tenías o que querías hacer estos días. <br>
+        Que alomejor ha sido tu cumpleaños (¡FELICIDADES!) o era el de alguien especial para tí y ahora mismo lo estarías celebrando. <br>
+        NO SOMOS ISLAS. Nos necesitamos. <br>
+        Quizá tenías un examen o trabajo y no sabes aún cómo van a ir las cosas.<br></h5>
+    <h4>A PARTIR DE AQUÍ PROHIBIDO PENSAR EN TODO ELLO.</h4>
+
+    <h5> Tienes ante tí una web creada por cuatro estudiantes de la Universidad Carlos III de Madrid que promete entretenerte
+          un rato antes de que vuelvas a coger la PLAYSTATION o que el pesado de tu amigo vuelva a llamarte por videollamada para saber
+          si te has declarado ya al chico/a que te gusta (créeme, NO es buena idea).
+    </h5>
+    <h4>Esperamos que todos los tuyos estén bien. </h4>
+    <h6>Y recuerda como decían en la película Naúfrago:<br>
+    "Sé lo que tengo que hacer ahora, tengo que seguir respirando porque mañana el sol saldrá. ¿Quien sabe lo que podría traer la marea?"</h6>
+
+    <!--CARRUSEL-->
+    <div class="contenedorCarrusel">
+      <!--FOTOS-->
+      <div class="imagen">
+        <img src="./insta/fest3.jpg">
+      </div>
+      <div class="imagen">
+        <img src="./insta/fest1.jpg">
+      </div>
+      <div class="imagen">
+        <img src="./insta/fest2.jpg">
+      </div>
+      <div class="imagen actual">
+        <img src="./insta/sonorama.jpg">
+      </div>
+      <div class="imagen">
+        <img src="./insta/laliga.jpg">
+      </div>
+      <div class="imagen">
+        <img src="./insta/cad100.jpg">
+      </div>
+      <div class="imagen">
+        <img src="./insta/musical.jpg">
+      </div>
+
+      <!--PUNTOS-->
+      <div class="puntos">
+        <span class="punto activo" onclick="mostrar(0)";></span>
+        <span class="punto" onclick="mostrar(1)";></span>
+        <span class="punto" onclick="mostrar(2)";></span>
+        <span class="punto" onclick="mostrar(3)";></span>
+        <span class="punto" onclick="mostrar(4)";></span>
+        <span class="punto" onclick="mostrar(5)";></span>
+        <span class="punto" onclick="mostrar(6)";></span>
+      </div>
+
+    </div>
+  </div>
+
+  <!--DESCRIPCION JUEGO PESTAÑA-->
+  <a href="#" class="cabecera" id="descripcionjuego" onclick="mostrarPestana(1);">DESCRIPCIÓN<br> JUEGO</a></td>
+  <div class="pestana" id="explicaJuego">
+    <h3>“ESQUIVA EL CORONAVIRUS”</h3>
+            <p class="parrafo">En este juego,  cada jugador es un sanitario y su misión intentar esquivar las partículas del virus para no contagiarse.</p>
+              <br>
+              <h5><u>¿Cómo funciona?:</u></h5>
+              <br>
+              <p class="parrafo">
+              El MÉDICO, podrá moverse a la derecha, izquierda, arriba y abajo con los botones del teclado:
+              <br>
+              <img src="./img/enfermero.png" width=150 height=150>
+              <img src="./img/controles.png" width=165 height=150>
+              <br>
+              Lo que intentará esquivar son las PARTÍCULAS DEL CORONAVIRUS:
+              <br>
+              <img src="./img/coronavirus.png" width=150 height=125>
+              <br>
+              Tiene <u>3 VIDAS</u>, así que podrá entrar en contacto con el virus 3 veces.
+              <br>Pero si son más, el médico enferma y ya no puede continuar trabajando:<br>
+            </p>
+            <p class="parrafo"> <img src="./img/gameover.png" width=200 height=200>
+               <br>Pero tranqui, se recuperará a tiempo de salir a la calle.</p>
+  </div>
+
+  <!--JUEGO PESTAÑA-->
+  <a href="#" class="cabecera" onclick="mostrarPestana(2);">JUEGO</a>
+  <div class="pestana" id="pestanajuego">
+    <div>
+      <button onclick=video(); id="boton">play</button>
+    </div>
+    <div>
+      <video width="800" height="650" poster="./img/poster.jpg"  onended="startGame()" id="video">
+        <source src="./video/54321.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+<!--ENTRETANIMIENTO PESTAÑA-->
+  <a href="#" class="cabecera" onclick="mostrarPestana(3);">ENTRETENIMIENTO</a>
+  <div class="pestana">
+    <div class="subcontenedor">
+      <div>
+        <p> ¿Qué te apetece hacer?</p>
+      </div>
+    <!--Libros SubPESTAÑA de ENTRETENIMIENTO-->
+      <a href="#" class="subcabecera c-subactiva" onclick="mostrarSubPestana(0)" id="libros">LIBROS</a>
+      <div class="subpestana">
+        <table>
+            <tr>
+              <td><a href="https://www.casadellibro.com/libro-come-comida-real-movimiento-realfooding/9788449335617/9027236">Come comida real (Carlos Ríos)</a></td>
+              <td><a href="https://www.casadellibro.com/libro-el-monje-que-vendio-su-ferrari-una-fabula-espiritual/9788499087122/1814884">El monje que vendió su ferrari (Robin Sahrma)</a></td>
+              <td><a href="https://www.casadellibro.com/libro-harry-potter-y-la-piedra-filosofal/9788498382662/1702767">Harry Potter y la piedra filosofal (J.K.Rowling)</a></td>
+              <td><a href="https://www.casadellibro.com/libro-memorias-de-una-salvaje/9788408194453/7875019">Memorias de una salvaje (Bebi Fernández)</a></td>
+              <td><a href="https://www.casadellibro.com/libro-el-chico-que-siguio-a-su-padre-hasta-auschwitz/9788408205678/9024551">El chico que siguió a su padre hasta Auschwitz (Jeremy Dronfield)</a></td>
+            </tr>
+
+            <tr>
+              <td><img src="./img/ComeComidaReal.jpg" width=125 height=150></td>
+              <td><img src="./img/ElMonjeQueVendioSuFerrari.jpg" width=125 height="=150"></td>
+              <td><img src="./img/HarryPotter.jpg" width=125 height=150></td>
+              <td><img src="./img/MemoriasDeUnaSalvaje.jpg" width=125 height=150></td>
+              <td><img src="./img/ElChicoQueSiguioASuPadre.jpg" width=125 height=150></td>
+            </tr>
+
+            <tr>
+              <td><a href="https://www.casadellibro.com/libro-mujercitas/9788408216636/9788451">Mujercitas (Louisa May Alcott)</a></td>
+              <td><a href="https://www.casadellibro.com/libro-un-cuento-perfecto/9788491291916/11195491">Un cuento perfecto (Elisabet Benavent)</a></td>
+              <td><a href="https://www.casadellibro.com/libro-las-luces-de-septiembre/9788408080794/1195367">Las luces de Septiembre (Carlos Ruiz Zafón)</a></td>
+              <td><a href="https://www.casadellibro.com/libro-diccionario-de-las-cosas-que-no-supe-explicarte/9788467054026/8933065">Diccionario de las cosas que no supe explicarte (Risto Mejide)</a></td>
+              <td><a href="https://www.casadellibro.com/libro-las-aventuras-de-frank-de-la-jungla/9788408009597/2028883">Las aventuras de Frank de la jungla (Nacho Moreno Medina, Frank Cuesta)</a></td>
+            </tr>
+
+            <tr>
+              <td><img src="./img/Mujercitas.jpg" width=125 height=150></td>
+              <td><img src="./img/UnCuentoPerfecto.jpg" width=125 height=150></td>
+              <td><img src="./img/LasLucesDeSeptiembre.jpg" width=125 height=150></td>
+              <td><img src="./img/DiccionarioDeLasCosasQueNoSupeExplicarte.jpg" width=125 height=150></td>
+              <td><img src="./img/FrankDeLaJungla.jpg" width=125 height=150></td>
+            </tr>
+
+        </table>
+
+      </div>
+
+    <!--Películas SubPESTAÑA de ENTRETENIMIENTO-->
+      <a href="#" class="subcabecera c-subactiva" onclick="mostrarSubPestana(1)" id="peliculas">PELÍCULAS</a>
+      <div class="subpestana">
+        <table>
+              <tr>
+                <td> <a href="https://www.filmaffinity.com/es/film467040.html" class="tdpeliculas">Ocean´s eleven</a></td>
+                <td> <a href="https://www.filmaffinity.com/es/film294674.html" class="tdpeliculas">En busca de la felicidad </a></td>
+                <td> <a href="https://www.filmaffinity.com/es/film594480.html" class="tdpeliculas">La vida es bella</a></td>
+                <td> <a href="https://www.filmaffinity.com/es/film423821.html" class="tdpeliculas">Harry Potter y la piedra filosofal</a></td>
+                <td> <a href="https://www.filmaffinity.com/es/film542328.html" class="tdpeliculas">Independence Day</a></td>
+              </tr>
+
+              <tr>
+                <td><img src="./img/OceansEleven.jpg" width=125 height=150></td>
+                <td><img src="./img/EnBuscaDeLaFelicidad.jpg" width=125 height=150></td>
+                <td><img src="./img/LaVidaEsBella.jpg" width=125 height=150></td>
+                <td><img src="./img/PiedraFilosofal.jpg" width=125 height=150></td>
+                <td><img src="./img/IndependenceDay.jpg" width=125 height=150></td>
+              </tr>
+
+              <tr>
+                <td> <a href="https://www.filmaffinity.com/es/film265575.html" class="tdpeliculas">Monstruos S.A.</a></td>
+                <td> <a href="https://www.filmaffinity.com/es/film444796.html" class="tdpeliculas">Forrest Gump</a></td>
+                <td> <a href="https://www.filmaffinity.com/es/film152490.html" class="tdpeliculas">Jurassic Park</a></td>
+                <td> <a href="https://www.filmaffinity.com/es/film783311.html" class="tdpeliculas">Solo en casa</a></td>
+                <td> <a href="https://www.filmaffinity.com/es/film459936.html" class="tdpeliculas">ToyStory</a></td>
+              </tr>
+
+              <tr>
+                <td><img src="./img/MonstruosSA.jpg" width=125 height=150></td>
+                <td><img src="./img/ForrestGump.jpg" width=125 height=150></td>
+                <td><img src="./img/JurassicPark.jpg" width=125 height=150></td>
+                <td><img src="./img/SoloEnCasa.jpg" width=125 height=150></td>
+                <td><img src="./img/ToyStory.jpg" width=125 height=150></td>
+              </tr>
+          </table>
+
+      </div>
+
+
+    <!--Recetas SubPESTAÑA de ENTRETENIMIENTO-->
+      <a href="#" class="subcabecera c-subactiva" onclick="mostrarSubPestana(2)" id="recetas">RECETAS</a>
+      <div class="subpestana">
+            <table>
+              <tr>
+                <td><a href="https://www.directoalpaladar.com/recetas-de-carnes-y-aves/pollo-coca-cola-soja-receta-chino-estadounidense-que-no-defrauda">Pollo con Coca-cola y soja</a></td>
+                <td><a href="https://www.directoalpaladar.com/recetas-de-carnes-y-aves/pechugas-a-villeroy-receta-clasica-que-siempre-vas-a-acertar">Pechugas a la Villerroy</a></td>
+                <td><a href="https://www.directoalpaladar.com/recetas-de-pescados-y-mariscos/salmon-al-horno-a-baja-temperatura-forma-ideal-cocinar-este-pescado-nunca-se-pase">Salmón al horno a baja temperaturas</a></td>
+                <td><a href="https://www.directoalpaladar.com/recetas-de-arroces/arroz-caldoso-calamares-almejas-langostinos-receta-diferente-para-menu-navidad-para-aprovechar-sus-sobras">Arroz caldoso de calamares, almejas y langostinos</a></td>
+                <td><a href="https://www.directoalpaladar.com/recetas-vegetarianas/zanahorias-tandoori-al-horno-yogur-receta-facil-rapida-sabrosa-guarnicion">Zanahoria Tandoori al horno con yogur</a></td>
+              </tr>
+
+              <tr>
+                <td><img src="./img/PolloCoca.jpg" width=125 height=150></td>
+                <td><img src="./img/PechugasVillerroy.jpg" width=125 height=150></td>
+                <td><img src="./img/SalmonAlHorno.jpg" width=125 height=150></td>
+                <td><img src="./img/ArrozCaldoso.jpg" width=125 height=150></td>
+                <td><img src="./img/Zanahoria.jpg" width=125 height=150></td>
+              </tr>
+
+              <tr>
+                <td><a href="https://www.directoalpaladar.com/recetas-de-legumbres-y-verduras/berenjenas-rellenas-soja-receta-ligera-facil-resultona">Berenjenas rellena de soja</a></td>
+                <td><a href="https://www.directoalpaladar.com/recetas-de-ensaladas/ensalada-cesar-brocoli-version-saludable-clasico-americano-ideal-para-cena">Ensalada César de brocoli</a></td>
+                <td><a href="https://www.directoalpaladar.com/postres/receta-pastel-tarta-torta-tres-leches-asi-se-hace-dulce-delicioso-latinoamerica">Tarta de tres leches</a></td>
+                <td><a href="https://www.directoalpaladar.com/recetas-de-carnes-y-aves/fajitas-pollo-al-horno-forma-facil-sabrosa-preparar-mitico-plato-tex-mex">Fajitas de pollo al horno</a></td>
+                <td><a href="https://www.directoalpaladar.com/recetas-de-pescados-y-mariscos/bacalao-coliflor-a-gallega-receta-navidad-que-sabe-a-tradicion">Bacalao con coliflor a la gallega</a></td>
+              </tr>
+
+              <tr>
+                <td><img src="./img/BerenjenasRellenas.jpg" width=125 height=150></td>
+                <td><img src="./img/EnsaladaCesar.jpg" width=125 height=150></td>
+                <td><img src="./img/TartaTresLeches.jpg" width=125 height=150></td>
+                <td><img src="./img/FajitasAlHorno.jpg" width=125 height=150></td>
+                <td><img src="./img/BacalaoConColiflor.jpg" width=125 height=150></td>
+               </tr>
+            </table>
+
+      </div>
+
+  <!--Deportes SubPESTAÑA de ENTRETENIMIENTO-->
+      <a href="#" class="subcabecera c-subactiva" onclick="mostrarSubPestana(3)" id="deporte">DEPORTE</a>
+      <div class="subpestana">
+        <div class="lista1">
+          <ul type=circle>
+            <li>Ejercicios de abdomen</li>
+            <iframe width="300" height="150" src="https://www.youtube.com/embed/sxuZzi9sqL0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li>Estiramientos para después de entrenar</li>
+            <iframe width="300" height="150" src="https://www.youtube.com/embed/F-zvINoN9sA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li>Ejercicio bailando</li>
+            <iframe width="300" height="150" src="https://www.youtube.com/embed/ap44kTH0IzM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li>Cardio intenso</li>
+            <iframe width="300" height="150" src="https://www.youtube.com/embed/ksi-c8YgClY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li>Ejercicios de piernas</li>
+            <iframe width="300" height="150" src="https://www.youtube.com/embed/HNosAVcpsz4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </ul>
+        </div>
+        <div class="lista2">
+          <ul type=circle>
+            <li>Rutina de espalda</li>
+            <iframe width="300" height="150" src="https://www.youtube.com/embed/KHUvqjktkNs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li>Ejercicio para brazos</li>
+            <iframe width="300" height="150" src="https://www.youtube.com/embed/6mWIZf-dZCQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li>Clase de fitness(1/3)</li>
+            <iframe width="300" height="150" src="https://www.youtube.com/embed/6a0QZ2-rlXw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li>Clase de fitness(2/3)</li>
+            <iframe width="300" height="150" src="https://www.youtube.com/embed/LCv_tYdpvXc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <li>Clase de fitness(3/3)</li>
+            <iframe width="300" height="150" src="https://www.youtube.com/embed/U4D2cvCY8zk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+<!--final pestaña ENTRETENIMIENTO-->
+
+<!--SOBRE NOSOTROS PESTAÑA-->
+  <a href="#" class="cabecera" id="sobrenosotros" onclick="mostrarPestana(4);">SOBRE NOSOTROS</a>
+  <div class="pestana">
+    <p id="introsobrenosotros">¿Quieres conocer el equipo que está dentras del diseño y entender el nombre del grupo?</p>
+      <div class="subcontenedor">
+      <!--Subpestaña de Ariana en SOBRE NOSOTROS-->
+        <a href="#" class="subcabecera c-subactiva" onclick="mostrarSubPestana(4);" id="ari">ARI</a>
+        <div class= "subpestana">
+          <section class="descrip">
+            <img src="./img/Ariana.jpeg" height="400" width="270">
+          </section>
+          <aside class="descrip">
+            <p><br>Nombre: Ariana</br><br>Apellidos: Fernández Prieto</br><br>Vive en: Aranjuez(Madrid)</br><br>Estudia: Ingeniería de Sonido e Imagen en la Universidad Carlos III de Madrid</br></p>
+          </aside>
+        </div>
+      <!--Subpestaña de Sergio en SOBRE NOSOTROS-->
+         <a href="#" class="subcabecera c-subactiva" onclick="mostrarSubPestana(5);" id="ser">SER</a>
+         <div class= "subpestana">
+           <section class="descrip">
+             <img src="./img/sergio.jpg" height="400" width="270">
+          </section>
+          <aside class="descrip">
+            <p><br>Nombre: Sergio</br><br>Apellidos: Carrasco Fernández</br><br>Vive en: Lominchar(Toledo)</br><br>Estudia: Ingeniería de Sonido e Imagen en la Universidad Carlos III de Madrid</br></p>
+          </aside>
+        </div>
+      <!--Subpestaña de Carmen en SOBRE NOSOTROS-->
+         <a href="#" class="subcabecera c-subactiva" onclick="mostrarSubPestana(6);" id="car">CAR</a>
+         <div class= "subpestana">
+           <section class="descrip">
+             <img src="./img/Carmen.jpeg" height="400" width="270">
+           </section>
+           <aside class="descrip">
+             <p><br>Nombre: Carmen</br><br>Apellidos: Santofimia Ballesteros</br><br>Vive en: Getafe(Madrid)</br><br>Estudia: Ingeniería de Sonido e Imagen en la Universidad Carlos III de Madrid</br></p>
+           </aside>
+         </div>
+      <!--Subpestaña de Ana en SOBRE NOSOTROS-->
+         <a href="#" class="subcabecera c-subactiva" onclick="mostrarSubPestana(7);" id="ana">ANA</a>
+         <div class= "subpestana">
+          <section class="descrip">
+            <img src="./img/Ana.jpeg" height="400" width="270">
+          </section>
+          <aside class="descrip">
+            <p><br>Nombre: Ana</br><br>Apellidos: Gómez Navarro</br><br>Vive en: Madrid(Madrid)</br><br>Estudia: Ingeniería de Sonido e Imagen en la Universidad Carlos III de Madrid</br></p>
+          </aside>
+          </div>
+        </div>
+    </div>
+    <!--final pestaña SOBRE NOSOTROS-->
+
+
+    <!--DESARROLLO PROYECTO PESTAÑA-->
+    <a href="#" class="cabecera" id="desarrolloproyecto" onclick="mostrarPestana(5);">DESARROLLO<br> PROYECTO</a>
+    <div class="pestana">
+      <p id="desarrolloproyecto2">¿Quieres saber cómo fue el proceso de creación?</p>
+
+      <a href="#" class="subcabecera c-subactiva" onclick="mostrarSubPestana(8)" id="planificacionproyecto">Planificanción del proyecto</a>
+      <div class="subpestana">
+        <h6>El proyecto se inició en la universidad durante las horas que teníamos libres sin seguir ninguna planificación previa.<br>
+          Cada integrante del equipo buscó información y se realizó un <u>brainstorming</u> para el diseño y la temática de la página así como ideas de
+         cómo queríamos que fuera nuestro juego.<br>
+          <img src="./img/brain.png" width=125 height=150><br>
+          Tras decretarse el <u>estado de alarma</u> y  vivir una situación de cuarentena nos agobiamos bastante a la hora de realizar el proyecto. <br>
+          Fue ahí cuando se nos ocurrió la temática de la página web dado que no teníamos nada en claro excepto la dinámica del juego. <br>
+          <img src="./img/alarma.png" width=125 height=150><br>
+          Empezamos con la página principal, buscando un nombre, diseñamos un <u>logotipo único</u> (si lo utilizas, ¡menciónanos en las referencias!)
+           y la elección del  diseño:  fondo, estilo de letras, imágenes...Básicamente la estructura de nuestra página.<br>
+           <img src="./img/logogrande1.jpg" width=200 height=125><br>
+            Una vez realizado esto, seguimos con JavaScript.<br>
+             Para ello entre todos investigamos vídeos tutoriales, blogs, ejemplos disponibles en Aula Global,etc. Se realizaron pequeñas pruebas
+             que nos permitieron entener el código para así proceder a la creación del videojuego.
+            Primero con tareas sencillas como la creación de canvas, movimientos y así personalizando a nuestro estilo, los personajes y la animación.
+            Por último, la integración de elementos multimedia. Además de ir configurando la página web final introduciendo todos los elementos.<br>
+            <img src="./img/aprobado.png" width=125 height=150><br>
+        </h6>
+      </div>
+      <!--Subpestaña de Tecnologías aplicadas en DESARROLLO DEL PROYECTO-->
+      <a href="#" class="subcabecera c-subactiva" onclick="mostrarSubPestana(9)" id="tecnologiasaplicadas">Tecnologías aplicadas</a>
+      <div class="subpestana">
+        <p>Para el desarrollo del juego web multimedia, nos hemos basado en las tecnologías web como son HTML5 para la estructura
+          de la propia página, CSS para el estilo y en cuanto a la dinámica del juego hemos usado JAVASCRIPT,
+          haciendo uso de las técnicas de canvas y dom, orientación a objetos.<br><br>
+
+        <img src="./img/tecnologia.png" width=125 height=150><br></p>
+        <h6>
+          <br> -	<u>HTML</u>: para definir la estructura y el contenido de la web.</br>
+          <br> -	<u>CSS</u>: para definir los estilos de la web.</br>
+          <br> -	<u>JavaScript</u>: para la realización del juego y convertir la web en dinámica.</br>
+          <br> -	<u>Canvas</u>: para el desarrollo del videojuego</br>
+          <br> -	<u>Eventos multimedia</u>: como puede ser el evento ended, que hace que una vez el video se haya acabado, el juego comienze automáticamente.</br>
+          <br> -	<u>Orientación a objetos</u>: por ejemplo, para la creación de los componentes (medico, puntuación y vidas) y los obstáculos (virus) del videjouego.</br>
+          <br> -	<u>Separación de los ficheros</u> en distintas carpetas e <u>importación</u> de estos ficheros .css y .js en en el html.</br>
+          <br> -	Uso de <u>pestañas</u> para visualizar cada parte de la web en lugar de usar un solo fragmento.</br>
+          <br> -	Uso de <u>enlaces</u> para acceder a otras páginas web, de forma que se ofrezca información más específica.</h6>
+
+      </div>
+      <!--Subpestaña de Responsabilidades en DESARROLLO DEL PROYECTO-->
+      <a href="#" class="subcabecera c-subactiva" onclick="mostrarSubPestana(10)" id="responsabilidades">Responsabilidades de cada miembro</a>
+      <div class="subpestana">
+        <p>El proyecto está realizado equitatívamente entre todos. Cada miembro fue aportando ideas y sugerencias.
+          Además, según se ha ido avanzando cada uno decidió qué parte del proyecto controlaba más y así actuar como supervisor de esa parte.
+          Para ello, la distribución de estos supervisores fue la siguiente:<br><br>
+
+        <img src="./img/equipo.png" width=125 height=150></p><br>
+
+        <h6>
+          <br>  -<u>Ariana</u>: Carrusell e implementación de elementos multimedia en la página web.</br>
+          <br>  -<u>Sergio</u>: Dinámica del videojuego e implementación de elementos múltimedia del JavaScript.</br>
+          <br>  -<u>Carmen</u>: Canvas y animación del JavaScript.</br>
+          <br>  -<u>Ana</u>:Diseño del estilo de la web con el CSS e implementación de elementos multimedia en la página web.</br>
+        </h6>
+      </div>
+      <!--Subpestaña de Problemas en DESARROLLO DEL PROYECTO-->
+      <a href="#" class="subcabecera c-subactiva" onclick="mostrarSubPestana(11)" id="problemas">Problemas y dificultades</a>
+      <div class="subpestana">
+        <p>Los problemas más destacables que tuvimos fueron:<br>
+          <img src="./img/fix.png" width=125 height=150></p><br>
+        <p>-<u>Integración del videojuego en la propia web</u>: en un principio, se desarrolló el videojuego en ficheros aparte para probar
+          su funcionalidad, pero a la hora de meterlo en una de las pestañas de la página web nos dio problemas.
+           El principal fue que no salía el canvas. Se solucionó usando DOM, creando el elemento canvas y añadiendolo al body de las
+           páginas en el número de nodo correspondiente.<br>
+          -<u>Centrado del contenido de la página</u>: En un principio probamos los atributos de los márgenes en los estilos para
+          poder centrar el contenido, pero esto no resultó efectivo. Conseguimos solucionarlo usando la etiqueta center
+          tras buscar información en internet. Sin embargo, tras una tutoría se informó que dicha etiqueta estaba obsoleta
+           en html5. La solución final ha sido meter un cierto margen izquierdo a cada contenedor que se pretendía centrar.<br>
+          -<u>Video inicial del juego</u>: una vez introducido el juego en la página web, cuando acababa el video se quedaba al lado del juego.
+           Se solucionó usando DOM, accediendo al elemento video y ocultándose cuando se acabe y volviendo a mostrarle cuando se acabase el juego.<br>
+           - <u>Carrusel</u>: En un principio hicimos el carrusel completo sin fallos fuera del html principal. Contaba con flechas para mover las imágenes manualmente y un botón de play/pause para activar/parar la reproducción automática.<br>
+           El problema surgió al introducir este código en el proyecto. La estructura ya creada era compleja, algunos elementos dejaron de funcionar debido a que los tratábamos como enlaces y había problema de capas.
+            Esto se solucionó cambiando los valores de z-index de los links.<br> Posteriormente nos surgió otra dificultad, al pulsar los botones: la página subía al inicio automáticamente y era muy incómodo. <br>
+            <img src="./img/carrusel.png" width=300 height=310><br>
+            Por ello decidimos eliminar los botones y dejamos únicamente la reproducción automática y los puntos en los que también se pueden elegir manualmente las fotografías.
+
+        </p>
+      </div>
+      <!--Subpestaña de Puntos fuertes en DESARROLLO DEL PROYECTO-->
+      <a href="#" class="subcabecera c-subactiva" onclick="mostrarSubPestana(12)" id="puntosfuertes">Puntos fuertes del proyecto</a>
+      <div class="subpestana">
+        <p>
+          Algunos de los puntos fuertes de nuestro proyecto (que no pretendemos echarnos muchas flores...):<br><br>
+          <img src="./img/happy.png" width=200 height=210><br>
+          <br> -Uso carpetas para dividir los distintos tipos de ficheros, de forma que no quede todo en un mismo fichero y quede ordenado.</br>
+          <br> -Portabilidad del proyecto debido al uso de rutas relativas.</br>
+          <br> -Inclusión de elementos que hacen más agradable a la vista la página web como puede ser el uso de un carrusel de fotos.</br>
+          <br> -Elementos originales como el logo de la web, creado por nosotros mismos.</br>
+          <br> -La utilidad real de la web. Aunque esto haya sido un trabajo de clase, es una web util y para cuando salgamos de esta situación puede cambiarse la temática sin modificar demasiado la web.</br>
+        </p>
+      </div>
+  </div>
+
+    <!--REFERENCIAS PESTAÑA-->
+    <a href="#" class="cabecera" onclick="mostrarPestana(6);">REFERENCIAS</a>
+    <div class="pestana" id="referenciaPestana">
+
+
+        <p class="referencias"> Consideramos muy importante dar referencias de dónde hemos obtenido toda la información para la realización de nuestra Web.
+          Sin toda la información que tenemos tanto de nuestros profesores como del resto de desarrolladores no hubiera sido posible.
+          Si hay alguna referencia que falte, rogamos se ponga en contacto con nosotros para añadirla.<br>
+           <br>
+        <img src="./img/dance.png" width=200 height=210><br> </p> </p>
+        <p class="referencias"> Diapositivas y material de : <a href="https://login.uc3m.es/index.php/status/">Aula global </a> </p> </p>
+        <p  class="referencias"> Manual tanto para HTML5, CSS y JAVASCRIPT : <a href="https://www.w3schools.com/"> w3schools </a> </p> </p>
+        <p  class="referencias"> Estilos CSS, búsqueda de colores: <a href="https://htmlcolorcodes.com/es/">Códigos de color</a> </p> </p>
+        <p  class="referencias"> Páginas de referencia : <a href="https://www.creativosonline.org/blog/30-paginas-web-increiblemente-simples.html"> Creativos Online </a> </p> </p>
+        <p  class="referencias"> Aprender a poner pestañas: <a href="https://www.youtube.com/watch?v=mJAgRI_ESRA">Pestañas</a> </p> </p>
+        <p  class="referencias"> Tambien para pestañas: <a href="https://programandoointentandolo.com/2012/11/como-crear-pestanas-con-html.html">Pestañas</a> </p> </p>
+        <p  class="referencias"> Para poner tíldes: <a href="https://www.bing.com/videos/search?q=como+poner+tildes+en+html&view=detail&mid=0E79FCFBDEA7003F6A0B0E79FCFBDEA7003F6A0B&FORM=VIRE"> YouTube</a> </p> </p>
+        <p class="referencias"> Para añadir vídeos: <a href="https://www.bing.com/videos/search?q=como+poner+videos+de+youtube+en+html&view=detail&mid=BF4BDBC8E905A41ACB2CBF4BDBC8E905A41ACB2C&FORM=VIRE">YouTube </a> </p> </p>
+        <p class="referencias"> Para añadir imágenes o iconos: <a href="https://www.flaticon.es/">Flaticon </a> </p> </p>
+        <p class="referencias"> Foto del carrusel FESTIVAL YoMeQuedoEnCasa: <a href="https://www.instagram.com/yomequedoencasafestival/?hl=es">Instagram YoMeQuedoEnCasa</a> </p> </p>
+        <p class="referencias"> Foto del carrusel FESTIVAL LaLiga: <a href="https://www.instagram.com/p/B-P7rV7nraO/">Instagram LaLiga</a> </p> </p>
+        <p class="referencias"> Foto del carrusel El Musical: <a href="https://www.instagram.com/quedateencasa_elmusical/?hl=es">Instagram ElMusical</a> </p> </p>
+        <p class="referencias"> Foto del carrusel CADENA 100: <a href="https://www.instagram.com/p/B-boweEFfer/">Instagram CADENA 100</a> </p> </p>
+        <p class="referencias"> Foto del carrusel SONORAMA: <a href="https://www.instagram.com/p/B-e2-p-Blbl/">Instagram SONORAMA FEST</a> </p> </p>
+        <p class="referencias"> Música de Sofía Ellar y Álvaro Soler: <a href="https://www.youtube.com/watch?v=Qewf1uy8_8o">Barrer a casa</a> </p> </p>
+        <p class="referencias"> Música de varios artistas: <a href="https://www.youtube.com/watch?v=MCwYOsOCUgg">Quédate en tu casa</a> </p> </p>
+        <p class="referencias"> Vídeo para el juego: <a href="https://www.youtube.com/watch?v=67lnjV6SrFw">Cuenta atrás</a> </p> </p>
+        <p class="referencias"><img src="./img/gracias.png" width=200 height=210><br> </p> </p>
+
+    </div>
+
+</div>
+<!--final contenedor principal-->
+
+</body>
+</html>

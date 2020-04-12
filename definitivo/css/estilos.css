@@ -1,0 +1,406 @@
+.contenedor{
+  position: relative;
+  height:100%;
+  margin: 2%;
+  margin-left: 9%;
+}
+
+.cabecera{
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px;
+  border: 2px solid;
+  position:relative;
+  color:black;
+  transform: translateY(2px);
+  z-index: 2;
+  background-color:#F0FFFF;
+}
+
+.pestana{
+  position:absolute;
+  border:0px solid;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  height:100%;
+  visibility:hidden;
+  opacity: 0;
+  transition:visibility 1s, opacity 1s;
+}
+
+#descripcionjuego{
+  font-size: small;
+  padding-top: 3px;
+  text-align: center;
+}
+
+#sobrenosotros{
+  font-size: small;
+  padding-top: 18px;
+  text-align: center;
+}
+
+#desarrolloproyecto{
+  font-size: small;
+  padding-top: 3px;
+  text-align: center;
+}
+
+#desarrolloproyecto2{
+  margin-left: 10%;
+}
+
+.p-activa{
+  visibility: visible;
+  opacity: 1;
+}
+
+.c-activa{
+  border-bottom-color: #FFFACD;
+}
+
+.lista1{
+  float:left;
+  font-weight: bold;
+  font-size:large;
+}
+
+.lista2{
+  float: right;
+  margin-left: 300px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.subcontenedor {
+   position: relative;
+   border-radius: 10px;
+   width:1000px;
+   height:1000px;
+   margin-left: 8%;
+}
+
+.subcabecera {
+   display: inline-block;
+   text-decoration:none;
+   padding:10px;
+   border: 2px solid;
+   position: relative;
+   color: black;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   transform: translateY(2px);
+   z-index: 2;
+}
+
+.subpestana {
+  position:absolute;
+  border:2px solid;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  border-top: none;
+  height:100%;
+  width:100%;
+  visibility:hidden;
+  opacity: 0;
+  transition:visibility 1s, opacity 1s;
+}
+
+.p-subactiva{
+   visibility: visible;
+   opacity: 1;
+}
+
+ .c-subactiva{
+ border-bottom-color:black;
+}
+
+#introsobrenosotros{
+  font-size: large;
+  font-style: italic;
+  margin-left: 15%;
+}
+
+.descrip{
+  display:inline-block;
+}
+
+#boton{
+  margin-top: 20px;
+  font-size:30px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 50%;
+  margin-left: 20%;
+}
+
+#video{
+  margin-left: 20%;
+}
+
+#libros{
+  margin-left: 30%;
+  background-color: #FFE4C4;
+}
+
+.tdpeliculas{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#peliculas{
+  background-color: #A9A9A9;
+}
+
+#recetas{
+  background-color: #5F9EA0;
+}
+
+#deporte{
+  background-color: #9932CC;
+}
+
+#ari{
+  background-color:#C6E39D;
+  margin-left: 38%;
+}
+
+#ser{
+  background-color:#F9F29C;
+}
+
+#car{
+  background-color: #9CE0F9;
+}
+
+#ana{
+  background-color:#FEA996;
+}
+
+h1 {
+  font-family: 'Calligraffitti';
+  max-width: 800px;
+  margin: auto;
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  padding: 10px;
+}
+
+h2{
+  max-width: 700px;
+  margin: auto;
+  font-family: 'Calligraffitti';
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  padding: 10px;
+}
+
+h3{
+  max-width: 700px;
+  margin: auto;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: 'Bowlby One', cursive;
+  font-size: 25px;
+  font-weight: 200;
+  text-align: center;
+  color:#585150;
+}
+
+h4{
+  max-width: 900px;
+  margin: auto;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: 'Bowlby One', cursive;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+  color:#585150;
+}
+
+h5 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 50;
+  max-width: 1100px;
+  margin: auto;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  line-height: 20px;
+  padding: 10px;
+}
+
+h6 {
+  font-family: 'Lobster';
+  max-width: 1100px;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  padding: 10px;
+}
+
+.parrafo{
+  font-family: 'Lobster';
+  max-width: 1100px;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  padding: 10px;
+}
+
+#referenciaPestana{
+  width:1000px;
+}
+.referencias{
+  margin-left: 20%;
+}
+
+#planificacionproyecto{
+  background-color: #F5F5DC;
+}
+
+#tecnologiasaplicadas{
+  background-color: #DEB887;
+}
+
+#responsabilidades{
+  background-color: #BDB76B;
+}
+
+#problemas{
+  background-color: #2F4F4F;
+}
+
+#puntosfuertes{
+  background-color: #E6E6FA;
+}
+
+p{
+  font-family: 'Lobster';
+  margin: auto;
+  font-size: 20px;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  padding: 10px;
+}
+
+p1{
+  font-family: 'Lobster';
+    text-align: justify;
+    padding: 30px;
+    position: absolute;
+}
+
+
+
+#cancion{
+  margin-left: 38%;
+}
+
+#explicaJuego{
+  margin-left: 9%;
+}
+
+#inicio{
+  margin-left: 9%;
+}
+
+/*CARRUSEL*/
+.contenedorCarrusel{
+  position: relative;
+  width: 500px;
+  height: 550px;
+  top: 30px;
+  background-color: black;
+  margin-left: 30%;
+}
+
+.imagen{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.imagen img{
+  max-width: 500px;
+  margin: auto;
+  height: 100%
+  position: relative;
+}
+
+.contenedorCarrusel a{
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  z-index: 3;
+}
+
+.anterior{
+  right: 97%;
+  top: 50%
+}
+
+.siguiente{
+  left: 97%;
+  top: 50%
+}
+
+/*contenedor de los puntos para ubicarlos*/
+.puntos{
+  position: absolute;
+  top: 93%;
+  width: 100%;
+  text-align: center;
+  z-index: 4;
+}
+
+.punto{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.punto:hover{
+  cursor: pointer;
+  background-color: gray;
+}
+
+.contenedorCarrusel a:hover{
+  color: gray;
+}
+
+.actual{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 1s, opacity 1s;
+}
+
+.activo{
+  background-color: gray;
+}
+
+a:link, a:visited, a:active, a:hover {
+    text-decoration:none;
+    color:black;
+}
